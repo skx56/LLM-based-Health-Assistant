@@ -26,23 +26,24 @@ The current repository is lightweight and suitable for evolving into a Python-ba
 ## Architecture Diagram
 
 ```mermaid
+%%{init: {"flowchart": {"nodeSpacing": 55, "rankSpacing": 70, "curve": "basis"}, "themeVariables": {"fontSize": "16px", "fontFamily": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"}}}%%
 flowchart TD
   User["User Health Question"] --> Interface["Conversational Interface"]
-  Interface --> Intake["Intent and Symptom Intake"]
+  Interface --> Intake["Intent and<br/>Symptom Intake"]
   Intake --> Retrieval["Health Information Retrieval"]
-  Retrieval --> Safety["Safety and Triage Guardrails"]
+  Retrieval --> Safety["Safety and<br/>Triage Guardrails"]
   Safety --> Response["Clear Guidance Response"]
   Response --> Interface
 
-  classDef inputs fill:#FEE2E2,stroke:#DC2626,color:#7F1D1D,stroke-width:2px;
-  classDef process fill:#ECFCCB,stroke:#65A30D,color:#365314,stroke-width:2px;
-  classDef data fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A,stroke-width:2px;
-  classDef agent fill:#FAE8FF,stroke:#C026D3,color:#701A75,stroke-width:2px;
-  classDef output fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2px;
+  classDef inputs fill:#FEE2E2,stroke:#DC2626,color:#7F1D1D,stroke-width:2.5px;
+  classDef process fill:#ECFCCB,stroke:#65A30D,color:#365314,stroke-width:2.5px;
+  classDef data fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A,stroke-width:2.5px;
+  classDef agent fill:#FAE8FF,stroke:#C026D3,color:#701A75,stroke-width:2.5px;
+  classDef output fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2.5px;
   class User inputs;
   class Interface,Intake,Retrieval,Safety process;
   class Response output;
-  linkStyle default stroke:#52525B,stroke-width:2px;
+  linkStyle default stroke:#52525B,stroke-width:2.5px;
 ```
 
 ## Technology Stack
