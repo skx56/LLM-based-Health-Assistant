@@ -23,6 +23,18 @@ This repository is positioned as a foundation for a health-assistant workflow. T
 
 The current repository is lightweight and suitable for evolving into a Python-backed assistant with retrieval, validation, and user-interface layers. The documentation defines the intended boundaries and engineering direction.
 
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+  User["User Health Question"] --> Interface["Conversational Interface"]
+  Interface --> Intake["Intent and Symptom Intake"]
+  Intake --> Retrieval["Health Information Retrieval"]
+  Retrieval --> Safety["Safety and Triage Guardrails"]
+  Safety --> Response["Clear Guidance Response"]
+  Response --> Interface
+```
+
 ## Technology Stack
 
 - Python-ready project foundation.
