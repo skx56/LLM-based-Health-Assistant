@@ -33,6 +33,16 @@ flowchart TD
   Retrieval --> Safety["Safety and Triage Guardrails"]
   Safety --> Response["Clear Guidance Response"]
   Response --> Interface
+
+  classDef inputs fill:#FEE2E2,stroke:#DC2626,color:#7F1D1D,stroke-width:2px;
+  classDef process fill:#ECFCCB,stroke:#65A30D,color:#365314,stroke-width:2px;
+  classDef data fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A,stroke-width:2px;
+  classDef agent fill:#FAE8FF,stroke:#C026D3,color:#701A75,stroke-width:2px;
+  classDef output fill:#DCFCE7,stroke:#16A34A,color:#14532D,stroke-width:2px;
+  class User inputs;
+  class Interface,Intake,Retrieval,Safety process;
+  class Response output;
+  linkStyle default stroke:#52525B,stroke-width:2px;
 ```
 
 ## Technology Stack
